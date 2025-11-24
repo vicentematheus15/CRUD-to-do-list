@@ -32,12 +32,23 @@ app.post("/create",(req,res)=>{
         //controller: retorna a resposta para a requisição post com o código (500, 201)
         (err,result)=>{
             if(err){
-                res.status(500).json({message:"Erro no servidor", error:err})
-                console.log("erro no servidor",err)
+                console.log(err)
             }
-
             else{
-                res.status(201).json({message:"Tarefa criada com sucesso", taskId:result.insertId})
+                req.send(result)
+            }
+        } )
+})
+
+//SELECT
+app.get("/empregados)", (req,res)=>{
+    db.query("SELECT * FROM empregados",
+        (err,result)=>{
+            if(err){
+                console.log(err)
+            }
+            else{
+                req.send(result)
             }
         } )
 })
