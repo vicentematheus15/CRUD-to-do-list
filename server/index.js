@@ -78,5 +78,5 @@ app.delete("/delete/:id", (req,res)=>{
 });
 
 app.listen(3001,()=>{
-    console.log("Server up.")
+    console.log("Servidor rodando na porta 3001")
 });
