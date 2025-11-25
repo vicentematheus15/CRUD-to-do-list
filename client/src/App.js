@@ -15,6 +15,7 @@ function App(){
   const [editar, setEditar] = useState(false);
   const [empregadoList, setEmpregadoList] = useState([]);
 
+  
   const add = ()=>{
     Axios.post("http://localhost:3001/create", {
       nome:nome,
@@ -28,6 +29,7 @@ function App(){
     limparCampos();
   });
   };
+
 
   const update = () => {
 
@@ -45,6 +47,7 @@ function App(){
   });
 }
 
+
 const deleteEmpregado = (id) => {
 
   Axios.delete(`http://localhost:3001/delete/${id}`).then(()=>{
@@ -53,6 +56,7 @@ const deleteEmpregado = (id) => {
   limparCampos();
 });
 }
+
 
 const limparCampos = ()=> {
 
