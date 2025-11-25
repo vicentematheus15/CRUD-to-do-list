@@ -67,6 +67,18 @@ const limparCampos = ()=> {
 }
 
 
+const editarEmpleado = (val)=> {
+
+  setEditar(true);
+
+  setNombre(val.nombre);
+  setEdad(val.edad);
+  setPais(val.pais);
+  setCargo(val.cargo);
+  setAnios(val.anios);
+  setId(val.id);
+
+}
 
 
   const getEmpregados = () => {
