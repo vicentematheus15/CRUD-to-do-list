@@ -54,6 +54,19 @@ const deleteEmpregado = (id) => {
 });
 }
 
+const limparCampos = ()=> {
+
+  setNome("");
+  setIdade(0);
+  setPais("");
+  setCargo("");
+  setAnos(0);
+  setId(0);
+  setEditar(false);
+
+}
+
+
 
 
   const getEmpregados = () => {
