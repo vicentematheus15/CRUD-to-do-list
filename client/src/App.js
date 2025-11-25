@@ -45,7 +45,14 @@ function App(){
   });
 }
 
+const deleteEmpregado = (id) => {
 
+  Axios.delete(`http://localhost:3001/delete/${id}`).then(()=>{
+  getEmpregados();
+  alert("Eliminado!!!");
+  limparCampos();
+});
+}
 
 
 
