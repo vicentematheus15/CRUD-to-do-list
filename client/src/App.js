@@ -23,7 +23,7 @@ function App(){
       cargo:cargo,
       anos:anos
     }).then(()=>{
-    getEmpregado();
+    getEmpregados();
     alert("Empregado registrado.");
     limparCampos();
   });
@@ -33,27 +33,29 @@ function App(){
 
     Axios.put("http://localhost:3001/update",{
     id:id,
-    nombre:nombre,
-    edad:edad,
+    nome:nome,
+    idade:idade,
     pais:pais,
     cargo:cargo,
-    anios:anios
+    anos:anos
   }).then(()=>{
-    getEmpleados();
+    getEmpregados();
     alert("Atualizado!!!");
-    limpiarCampos();
+    limparCampos();
   });
 }
 
-c
 
-  const getEmpregado = () => {
+
+
+
+  const getEmpregados = () => {
     Axios.get("http://localhost:3001/create").then((response)=>{
       setEmpregadoList(response.data);
     });
   };
 
-  getEmpregado();
+  getEmpregados();
 
   return(
     <div className="container">
