@@ -67,15 +67,15 @@ const limparCampos = ()=> {
 }
 
 
-const editarEmpleado = (val)=> {
+const editarEmpregado = (val)=> {
 
   setEditar(true);
 
-  setNombre(val.nombre);
-  setEdad(val.edad);
+  setNome(val.nome);
+  setIdade(val.idade);
   setPais(val.pais);
   setCargo(val.cargo);
-  setAnios(val.anios);
+  setAnos(val.anos);
   setId(val.id);
 
 }
