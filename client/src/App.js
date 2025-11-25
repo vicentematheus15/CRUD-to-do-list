@@ -29,6 +29,24 @@ function App(){
   });
   };
 
+  const update = () => {
+
+    Axios.put("http://localhost:3001/update",{
+    id:id,
+    nombre:nombre,
+    edad:edad,
+    pais:pais,
+    cargo:cargo,
+    anios:anios
+  }).then(()=>{
+    getEmpleados();
+    alert("Atualizado!!!");
+    limpiarCampos();
+  });
+}
+
+c
+
   const getEmpregado = () => {
     Axios.get("http://localhost:3001/create").then((response)=>{
       setEmpregadoList(response.data);
